@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 
+// Bug: Date.now() was previously used directly which executes immediately
+// Fix: Replaced manual date field with timestamps option
 const bookSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -14,6 +16,6 @@ const bookSchema = new mongoose.Schema({
     default: true,
   },
  
-  },{timestamps: true}); // createdAt & updatedAt
+  },{timestamps: true}); // Automatically adds createdAt & updatedAt
 
 module.exports = mongoose.model("Book", bookSchema);
