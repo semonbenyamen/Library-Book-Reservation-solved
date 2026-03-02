@@ -14,6 +14,6 @@ const bookSchema = new mongoose.Schema({
     default: true,
   },
  
-  },{timestamps: true});
+  },{timestamps: true}); // createdAt & updatedAt
 
 module.exports = mongoose.model("Book", bookSchema);
