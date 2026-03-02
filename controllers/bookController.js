@@ -1,5 +1,6 @@
 const Book = require("../models/Book");
 
+// Reserve Multiple Books
 const reserveBooks = async (req, res) => {
   try {
    const { bookIds } = req.body;
@@ -27,6 +28,7 @@ const reserveBooks = async (req, res) => {
   }
 };
 
+// Delete Book
 const deleteBook = async (req, res) => {
   try {
     const { id } = req.params;
